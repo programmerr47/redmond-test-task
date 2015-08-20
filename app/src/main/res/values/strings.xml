@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Google Search Clone</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!-- Search Page-->
+    <string name="search_hint">Type text and press search</string>
+    <string name="search_images_type">Images</string>
+    <string name="search_text_type">Text</string>
+    <string name="no_content">There is no content according to this query</string>
+    <string name="no_content_connection">Opps&#8230;something went wrong.\nPlease check your internet connection</string>
+
+    <!-- Network Statuses -->
+    <string name="network_connected">Network connected</string>
+    <string name="waiting_for_connection">Waiting for connection&#8230;</string>
 </resources>
