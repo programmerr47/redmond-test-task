@@ -22,17 +22,122 @@
         android:textColor="@color/secondary_text"
         android:textSize="15sp"
         android:gravity="center"
+        android:visibility="gone"
         app:fontName="Roboto-Regular.ttf"/>
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar_default"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/search_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_line_height"
+            android:layout_marginRight="@dimen/margin_huge"
+            android:layout_marginLeft="@dimen/margin_huge"
+            android:orientation="horizontal">
+
+            <com.github.programmerr47.googlesearchclone.representation.views.CustomFontEditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/divider"
+                android:hint="@string/search_hint"
+                app:fontName="Roboto-Regular.ttf"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_search"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_param_line_height"
+            android:layout_below="@id/search_line"
+            android:layout_marginRight="@dimen/margin_huge"
+            android:layout_marginLeft="@dimen/margin_huge"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:src="@drawable/ic_text"/>
+
+                    <com.github.programmerr47.googlesearchclone.representation.views.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/search_text_type"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:src="@drawable/ic_image"/>
+
+                    <com.github.programmerr47.googlesearchclone.representation.views.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/search_images_type"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>
